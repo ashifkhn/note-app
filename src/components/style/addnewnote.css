@@ -1,0 +1,20 @@
+.note {
+    background-color: rgb(147, 251, 251);
+    margin-bottom: 1rem;
+    border-radius: 1rem;
+    padding: 1rem;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.add_new_note{
+
+}
+
+.note_footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
