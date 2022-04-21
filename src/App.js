@@ -25,6 +25,11 @@ function App() {
     date: "15/4/2022"
   },
   ])
+
+  const AddNote = (text) => {
+    console.log(text)
+  }
+
   return (
     <div className="main_container">
       <h1>Note-App</h1>
