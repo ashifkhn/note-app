@@ -1,41 +1,39 @@
 import "./App.css";
-import logo from "./logo.png";
+import NotesList from "./components/NotesList";
+import { useState } from "react"
+// import { nonoid } from "nanoid"
 
 function App() {
+  const [notes, setNotes] = useState([{
+    id: 1,
+    text: "This a note",
+    date: "15/4/2022"
+  },
+  {
+    id: 2,
+    text: "This a note",
+    date: "15/4/2022"
+  },
+  {
+    id: 3,
+    text: "This a note",
+    date: "15/4/2022"
+  },
+  {
+    id: 4,
+    text: "This a note",
+    date: "15/4/2022"
+  },
+  ])
+
+  const AddNote = (text) => {
+    console.log(text)
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} alt="mockBee logo" width="180" height="180" />
-        <h1 className="brand-title">
-          Welcome to <span>mockBee!</span>
-        </h1>
-        <p className="brand-description">
-          Get started by editing <code>src/App.js</code>
-        </p>
-        <div className="links">
-          <a
-            href="https://mockbee.netlify.app/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Explore mockBee
-          </a>
-          <a
-            href="https://mockbee.netlify.app/docs/api/introduction"
-            target="_blank"
-            rel="noreferrer"
-          >
-            API Documentation
-          </a>
-          <a
-            href="https://github.com/neogcamp/mockBee"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Contribute
-          </a>
-        </div>
-      </header>
+    <div className="main_container">
+      <h1>Note-App</h1>
+      <NotesList notes={notes} />
     </div>
   );
 }
